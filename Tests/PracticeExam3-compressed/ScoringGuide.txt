@@ -1,0 +1,19 @@
+Q1-a
++1 Use correct class, constructor, method headers.
++1 Declares at least one private list variable.
++1 Initialize all instance variables.
++1 Generate random number in the correct range.
++1 Inside of a loop, choose at least one string using a generated random number.
++1 Return a String[] array containing a random sequence of strings.
+
+Q1-b
++1 Create a new String[] array object of length str.length().
++1 Loop through the characters contained in str.
++1 Insert all characters into the String[] array and return String[] array.
+
+Q2
++1 Create a new HopsRecord() object.
++1 Calls addHop( hopDistance() ) inside of a loop.
++1 Uses getSum() and getCount() (or maxHops) inside of a loop to determine success and failure.
++1 Calls setSuccess( ___ ) with the correct boolean value.
++1 returns the new HopsRecord object.

@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRocket",
+            "request": "launch",
+            "mainClass": "TestRocket",
+            "projectName": "Module 4_21e5807e"
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      input, button {
+        width: 100px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+        margin: 0.5em 0.5em;
+        padding: 0.5em 0.5em;
+      }
+      div {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      #urlDiv {
+        height: 3em;
+      }
+      #colDiv {
+        top: 3em;
+        height: 3em;
+      }
+      #plotlyDiv {
+        top: 6em;
+        bottom: 0px;
+      }
+      #urlBox {
+        width: 700px;
+      }
+      #refresh {
+        background-color: lightgray;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Plotly chart will be drawn inside this DIV -->
+    <div id="urlDiv">
+      <input id="urlBox" placeholder="http:// (.csv)"/>
+      <button id="refresh">Refresh</button>
+    </div>
+    <div id="colDiv">
+      <input id="col1" placeholder="Column 1"/>
+      <input id="col2" placeholder="Column 2"/>
+      <input id="col3" placeholder="Column 3">
+    </div>
+    <div id="plotlyDiv"></div>
+    <script>
+      // can test with: https://raw.githubusercontent.com/plotly/datasets/master/3d-scatter.csv
+      urlBoxObj = document.getElementById('urlBox');
+      col1Obj = document.getElementById('col1');
+      col2Obj = document.getElementById('col2');
+      col3Obj = document.getElementById('col3');
+      refreshObj = document.getElementById('refresh');
+
+      function plot() {
+        Plotly.d3.csv( urlBoxObj.value,
+          // everything below is one big callback!
+          function(err, rows) {
+            function unpack(rows, key) {
+                return rows.map(function(row)
+                { return row[key]; });
+            }
+            var trace1 = {
+              x:unpack(rows, col1Obj.value),  y: unpack(rows, col2Obj.value), z: unpack(rows, col3Obj.value),
+              mode: 'markers',
+              marker: {
+                size: 12,
+                line: {
+                  color: 'rgba(217, 217, 217, 0.14)',
+                  width: 0.5
+                },
+                opacity: 0.8
+              },
+              type: 'scatter3d'
+            };
+            var trace2 = {
+              x:unpack(rows, 'x2'),  y: unpack(rows, 'y2'), z: unpack(rows, 'z2'),
+              mode: 'markers',
+              marker: {
+                color: 'rgb(127, 127, 127)',
+                size: 12,
+                symbol: 'circle',
+                line: {
+                  color: 'rgb(204, 204, 204)',
+                  width: 1
+                },
+                opacity: 0.9
+              },
+              type: 'scatter3d'
+            };
+            var data = [trace1, trace2];
+            var layout = {
+                  dragmode: false,
+                  margin: {
+                    l: 0,
+                    r: 0,
+                    b: 0,
+                    t: 0
+              }
+            };
+            Plotly.newPlot('plotlyDiv', data, layout, {showSendToCloud: true});
+          }
+          // end of the big callback!
+        );
+      };
+
+      urlBoxObj.onchange = plot;
+      refreshObj.onclick = plot;
+
+    </script>
+  </body>
+</html>

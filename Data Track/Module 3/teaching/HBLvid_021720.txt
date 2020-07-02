@@ -1,0 +1,62 @@
+Inheritance
+
+- Create an Animal class
+  - move()
+  - sound()
+- extend to a Dog and Cat class
+
+- Create an ObserveAnimals class
+- main Method
+  - instances of Dog and Cat
+  - call sound() and move() on each object
+
+
+
+Polymorphism
+
+- Create a AnimalActions class
+- Method to accept animal and add to ArrayList
+- method to print the sounds of all animals
+
+- Add to ObserveAnimals class
+- main method
+  - instance of AnimalActions (pass Dog and Cat)
+  - Print all sounds
+
+
+Interfaces
+
+- create a Shelter interface with openDoor();
+- create a Drivable interface with steer() and drive();
+
+- Create: class House implements Shelter
+- Create: class Car implements Shelter, Drivable
+
+- Create a InterfaceExamples class
+- instances:
+  - Shelter h = new House()
+  - Shelter c = new Car()
+    - can't call steer() or drive() on the Car!
+
+  - Drivable c1 = new Car()
+    - now we can call drive and steer on the Car()
+  - Drivable h1 = new House() // can't do it!  doesn't implement Drivable.
+
+  - List<String> = new ArrayList<String>();
+    - ArrayList<> implements List<> !
+
+
+Abstract Classes
+
+- Go back to Animal class and make abstract.
+- this makes sense because there is no real "generic" Animal, and no "generic" Animal sound().
+  - Abstract classes are really no different from a normal class, except that you have to extend them (no direct instances!)
+  - God made the wild animals according to their kinds,
+    the livestock according to their kinds,
+    and all the creatures that move along the ground according to their kinds.
+    And God saw that it was good.
+    Gen 1:25
+  - Many different varieties and kinds of animals, some with common traits that can be grouped together (abstractly),
+    but each in reality is distinctly unique.
+    An Animal base class (by itself) only makes sense as an abstract sense, not as a real class.
+    In the same way, there cannot be, and never has been, a "generic" Animal.

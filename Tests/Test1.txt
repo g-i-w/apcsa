@@ -1,0 +1,17 @@
+1.
+
+Consider the following code segment, which is intended to display 6.0.
+double fact1 = 1 / 2;
+double fact2 = 3 * 4;
+double product = fact1 * fact2;
+System.out.println(product);
+Which of the following best describes the error, if any, in the code segment?
+    • There are no errors and the code works as intended.
+      
+    • Either the numerator or the denominator of the fraction 1 / 2 should be cast as double.
+      
+    • The expression fact1 * fact 2 should be cast as double.
+      
+    • The expressions 1 / 2 and 3 * 4 should both be cast as double.
+      
+    • The variables fact1 and fact2 should both be declared as int.

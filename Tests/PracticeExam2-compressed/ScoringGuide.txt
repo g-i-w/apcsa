@@ -1,0 +1,24 @@
+Q1:
+
+A (3 points)
+(Same as SG)
+
+B (6 points)
++1: initialize array with numRows*numCols
++1: nested for-loop
++1: for-loop ranges correct
++1: declare index variable outside of for-loops, and increment
++1: call getValueAt(  ) and assign to 1D array
++1: return 1D array
+
+
+Q2:
+
+(5 points)
++1: calls findAlloccurances(  ) and returns an int[] array.
++1: loops through all indices of array returned by findAllOccurances
++1: correctly inserts at least one replacement string
++1: takes into account the difference in length between the find and replace strings
++1: correctly inserts all replacement strings
+bonus +0.5: check for null
+

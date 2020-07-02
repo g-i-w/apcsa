@@ -1,0 +1,8 @@
+- Examples creating arrays of Classes:
+  - MyClass[] = new MyClass[100];
+
+
+- Examples of classes with multiple constructors
+
+
+- 

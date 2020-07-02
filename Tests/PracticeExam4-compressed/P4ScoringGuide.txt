@@ -1,0 +1,19 @@
+P4-1a (4 points):
++1 Creates an ArrayList<Integer>.
++1 Accesses all elements in array tokens.
++1 Compares strings in tokens with both instance variables (in the context of a loop).
++1 Adds integers with the correct ranking to the ArrayList<Integer>.
+
+P4-1b (5 points):
++1 Initializes an ArrayList<String> to contain strings "to be evaluated first".
++1 Assigns a List<String> to a variable by calling precedenceRank().
++1 In the context of a loop, finds the greatest value ("rank") integer.
++1 In the context of a loop, adds strings corresponding to highest value, to the ArrayList<String>.
++1 Checks strings added to the ArrayList<String>, and only adds strings that are not delimiters.
+
+P4-2 (5 points):
++1 Initializes the message instance variable.
++1 Checks for the presence of substrings "error" and "alert".
++1 Checks for the presence of spaces before, after, and on both sides of each word.
++1 Sets the variable type to "note" if "error" or "alert" are not found.
++1 In the context of if-else statements, correctly checks for the word "error" before the word "alert".

@@ -1,0 +1,12 @@
+APCSA vid 020420
+
+- review binary search in pre-lab
+- talk about the compareTo String method
+- talk about comparing to index before (mid-1) and index (mid)
+
+- situation: duplicates that are longer than the search String
+  - compareTo will cause the search to float up to the first index naturally
+- situation: duplicates that are exact matches with the search String
+  - need to check for index before
+
+- Use indexOf to find each of the matches after the first

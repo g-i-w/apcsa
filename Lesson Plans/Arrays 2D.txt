@@ -1,0 +1,18 @@
+1. Create an int 1D array
+1b. populate with for loop
+
+2. Create an int 2D array
+2b. populate with nested for loops
+
+3. Create an int 2D array (delayed initialization)
+3.b populate with same nested loops, but now we need to create new sub-arrays
+
+4. Create a 2D ReallySimpleClass array (delayed)
+4b. populate with nested loops, but now we need new objects
+
+5. Create a 3D ReallySimpleClass array (delayed)
+5b. populate with nested loops
+
+6. Create two 1D arrays that reference the same set of ReallySimpleClass objects.
+
+7. Create a 2D array and populate with the two 1D arrays.

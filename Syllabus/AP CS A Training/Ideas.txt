@@ -1,0 +1,23 @@
+
+
+CSP:
+Make a website or notebook of “enduring understanding” points.
+
+
+CSA:
+Make a “sumo-bot” using lego mindstorm (after AP exam).  Can flash the brick to LaJos (java on lego mindstorm)
+
+http://www.lejos.org/
+
+Stack: plates, each with a set of variables
+
+
+Screencast:
+screencast-o-matic.com
+Open Broadcaster Software
+schoology.con
+
+
+code step by step: www.codestepbystep.com
+
+"Mastermind" game (From the 90s)

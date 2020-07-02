@@ -1,0 +1,2 @@
+https://www.mkyong.com/java/how-to-send-http-request-getpost-in-java/
+https://www.journaldev.com/7148/java-httpurlconnection-example-java-http-request-get-post
